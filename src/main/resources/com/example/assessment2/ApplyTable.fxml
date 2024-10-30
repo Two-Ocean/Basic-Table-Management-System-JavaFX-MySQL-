@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:controller="com.example.assessment2.ApplyController" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <VBox spacing="15" prefWidth="600" prefHeight="400" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+        <Label text="Apply Management System" style="-fx-font-size: 20;" />
+
+        <TableView fx:id="applyTable">
+            <columns>
+                <TableColumn fx:id="colSID" text="Student ID" />
+                <TableColumn fx:id="colITPName" text="ITP Name" />
+                <TableColumn fx:id="colMajor" text="Major" />
+                <TableColumn fx:id="colDecision" text="Decision" />
+            </columns>
+        </TableView>
+
+        <HBox spacing="10">
+            <Button text="Add Application" onAction="#handleAdd" />
+            <Button text="Update Application" onAction="#handleUpdate" />
+            <Button text="Delete Application" onAction="#handleDelete" />
+            <Button text="Retrieve Applications" onAction="#handleRetrieve" />
+            <Button text="Search Applications" onAction="#handleSearch" />
+        </HBox>
+        <Button text="Back" onAction="#handleBack" />
+    </VBox>
+</AnchorPane>

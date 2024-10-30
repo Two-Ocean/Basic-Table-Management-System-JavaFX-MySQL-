@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:controller="com.example.assessment2.StudentController" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <VBox spacing="15" prefWidth="600" prefHeight="400" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+        <Label text="Student Management System" style="-fx-font-size: 20;" />
+
+        <TableView fx:id="studentTable">
+            <columns>
+                <TableColumn fx:id="colId" text="Student ID" />
+                <TableColumn fx:id="colName" text="Name" />
+                <TableColumn fx:id="colGPA" text="GPA" />
+                <TableColumn fx:id="colSizeHS" text="High School Size" />
+            </columns>
+        </TableView>
+
+        <HBox spacing="10">
+            <Button text="Add Student" onAction="#handleAdd" />
+            <Button text="Update Student" onAction="#handleUpdate" />
+            <Button text="Delete Student" onAction="#handleDelete" />
+            <Button text="Retrieve Students" onAction="#handleRetrieve" />
+            <Button text="Search Students" onAction="#handleSearch" />
+        </HBox>
+        <Button text="Back" onAction="#handleBack" />
+    </VBox>
+</AnchorPane>
